@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngFor="let product of products" class="product-list">
+    <h3 class="product-title">{{ product.name }}</h3>
+    <ng-container *ngFor="let currency of currencies">
+      <p class="product-price" *ngIf="product[currency.property]">
+        {{ currency.label }} :
+        {{ product[currency.property] | currency : currency.code }}
+      </p>
+    </ng-container>
+  </div>
+</div>
+<button (click)="recalculatePrices()" class="recalculate-btn">
+  Recalculate Prices
+</button>
