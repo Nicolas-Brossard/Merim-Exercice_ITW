@@ -35,6 +35,7 @@
 .recalculate-btn {
   background-color: #007bff;
   margin: 0% 50%;
+  transform: translateX(-50%);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -48,4 +49,11 @@
 
 .recalculate-btn:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
