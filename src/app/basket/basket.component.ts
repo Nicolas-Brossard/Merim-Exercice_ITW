@@ -15,11 +15,31 @@ import { CurrencyKey } from '../models/currency.types';
 })
 export class BasketComponent implements OnInit {
   products: Product[] = [
-    { name: 'USB Hub', cost: 10.5 },
-    { name: 'Microphone', cost: 5 },
-    { name: 'Headphones', cost: 14.99 },
-    { name: 'Monitor', cost: 300 },
-    { name: 'Notebook', cost: 1000 },
+    {
+      name: 'USB Hub',
+      cost: 10.5,
+      imageUri: 'assets/products/product-hub.jpg',
+    },
+    {
+      name: 'Microphone',
+      cost: 5,
+      imageUri: 'assets/products/product-microphone.jpg',
+    },
+    {
+      name: 'Headphones',
+      cost: 14.99,
+      imageUri: 'assets/products/product-headphones.jpg',
+    },
+    {
+      name: 'Monitor',
+      cost: 300,
+      imageUri: 'assets/products/product-monitor.jpg',
+    },
+    {
+      name: 'Notebook',
+      cost: 1000,
+      imageUri: 'assets/products/product-notebook.jpg',
+    },
   ];
 
   currencies: { code: string; label: string; property: CurrencyKey }[] = [

@@ -1,5 +1,10 @@
 <div class="container">
   <div *ngFor="let product of products" class="product-list">
+    <img
+      [src]="product.imageUri"
+      alt="{{ product.name }}"
+      class="product-image"
+    />
     <h3 class="product-title">{{ product.name }}</h3>
     <ng-container *ngFor="let currency of currencies">
       <p class="product-price" *ngIf="product[currency.property]">
